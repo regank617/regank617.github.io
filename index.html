@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle M. Regan | Bioinformatics & AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        ai: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#22d3ee', // Cyan
+                            text: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid #22d3ee;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #22d3ee; } }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-card border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-mono font-bold text-xl text-cyan-400">
+                    &lt;KMR /&gt;
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-cyan-400 transition duration-300 font-mono text-sm">01. About</a>
+                        <a href="#research" class="hover:text-cyan-400 transition duration-300 font-mono text-sm">02. Research</a>
+                        <a href="#publications" class="hover:text-cyan-400 transition duration-300 font-mono text-sm">03. Publications</a>
+                        <a href="#contact" class="px-4 py-2 rounded border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition font-mono text-sm">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <p class="font-mono text-cyan-400 mb-4">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-100 mb-4">Kyle M. Regan.</h1>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-400 mb-6">I build AI for public health.</h2>
+                <p class="text-slate-400 text-lg max-w-lg mb-8 leading-relaxed">
+                    I am a Ph.D. Candidate in <span class="text-cyan-400">Bioinformatics Data Science</span> at the University of Delaware. 
+                    I specialize in Generative AI, portable mass spectrometry, and real-time pathogen detection.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#research" class="bg-cyan-500 text-slate-900 px-6 py-3 rounded font-bold hover:bg-cyan-400 transition">View My Work</a>
+                    <a href="CV.pdf" target="_blank" class="border border-slate-400 text-slate-300 px-6 py-3 rounded font-bold hover:border-cyan-400 hover:text-cyan-400 transition">Resume / CV</a>
+                </div>
+            </div>
+
+         
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative rounded-lg overflow-hidden border-2 border-slate-700 bg-slate-800 aspect-square max-w-md mx-auto">
+                    <img src="headshot.jpg" alt="Kyle Regan Headshot" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-12">
+                <span class="font-mono text-cyan-400 text-xl mr-4">01.</span>
+                <h2 class="text-3xl font-bold text-slate-100">About Me</h2>
+                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-400 leading-relaxed">
+                <div class="md:col-span-2 space-y-4">
+                    <p>
+                        I am currently a researcher under Dr. Gonzalo R. Arce, working to bridge the gap between academia and industry. 
+                        My focus is on <strong class="text-cyan-400">biomedical machine learning</strong> and integrating it with mass spectrometry to solve real-world safety problems in hospitals and public transit.
+                    </p>
+                    <p>
+                        I am a recipient of the <span class="text-slate-200">NIH T32 pre-doctoral training award</span> and have collaborated with partners like **Zeteo Tech Inc.** and **Johns Hopkins Hospital**. 
+                        Beyond research, I am passionate about mentoring first-semester graduate students and teaching data science principles.
+                    </p>
+                    <p class="font-mono text-sm mt-4">Technologies I work with:</p>
+                    <ul class="grid grid-cols-2 gap-2 font-mono text-sm text-slate-300 mt-2">
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 text-cyan-400 mr-2"></i>Python & PyTorch</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 text-cyan-400 mr-2"></i>Transformers & GANs</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 text-cyan-400 mr-2"></i>Generative AI</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="w-4 h-4 text-cyan-400 mr-2"></i>Mass Spectrometry</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <h3 class="text-cyan-400 font-bold text-4xl mb-2">3.90</h3>
+                    <p class="text-sm font-mono mb-6">Ph.D. GPA</p>
+                    <h3 class="text-cyan-400 font-bold text-4xl mb-2">3+</h3>
+                    <p class="text-sm font-mono mb-6">Years Research Exp</p>
+                    <h3 class="text-cyan-400 font-bold text-4xl mb-2">2</h3>
+                    <p class="text-sm font-mono">Patents & Applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-12">
+                <span class="font-mono text-cyan-400 text-xl mr-4">02.</span>
+                <h2 class="text-3xl font-bold text-slate-100">Key Research Projects</h2>
+                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="wind" class="w-10 h-10 text-cyan-400"></i>
+                        <span class="font-mono text-xs text-slate-500">Zeteo Tech Collab</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">Environmental Pathogen Monitoring</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Translating mass spectrometry from the lab to the field. Using autonomous air collection and advanced sensing models to detect harmful pathogens (like E. coli) in airports and subways with minimal sample prep.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-300">
+                        <span>#FieldTesting</span>
+                        <span>#PublicSafety</span>
+                        <span>#BioDefense</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="activity" class="w-10 h-10 text-cyan-400"></i>
+                        <span class="font-mono text-xs text-slate-500">Johns Hopkins Collab</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">Breath Diagnostics (Generative AI)</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Developing noninvasive technology to detect lung disease directly from breath. I am preparing a first-author paper on novel improvements to generative AI for infection diagnostics.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-300">
+                        <span>#GenerativeAI</span>
+                        <span>#HealthDiagnostics</span>
+                        <span>#ClinicalApplication</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="cpu" class="w-10 h-10 text-cyan-400"></i>
+                        <span class="font-mono text-xs text-slate-500">Algorithm Design</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">Transformer Models & Tokenizers</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Engineered a novel efficient tokenizer based on next-wavelet prediction. Built transformer-based models guided by biological priors, boosting microbial classification F1 scores from 82.4% to 98.3%.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-300">
+                        <span>#Transformers</span>
+                        <span>#Wavelets</span>
+                        <span>#DeepLearning</span>
+                    </div>
+                </div>
+                
+                 <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="users" class="w-10 h-10 text-cyan-400"></i>
+                        <span class="font-mono text-xs text-slate-500">Leadership</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">Data Science Teaching</h3>
+                    <p class="text-slate-400 mb-4 text-sm">
+                        Leading undergraduate teams on semester-long data science projects. Teaching core principles of data collection, ML applications, and presentation skills while serving as a mentor for first-year Ph.D. students.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-cyan-300">
+                        <span>#Mentorship</span>
+                        <span>#Education</span>
+                        <span>#Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-12">
+                <span class="font-mono text-cyan-400 text-xl mr-4">03.</span>
+                <h2 class="text-3xl font-bold text-slate-100">Publications & Patents</h2>
+                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+            </div>
+
+            <ul class="space-y-6">
+                <li class="border-l-2 border-cyan-400 pl-4">
+                    <h4 class="text-slate-200 font-bold">Unmasking Airborne Threats: Guided-Transformers for Portable Aerosol Mass Spectrometry</h4>
+                    <p class="text-slate-400 text-sm italic">Regan, K.M et al. | Submitted to Computers in Biology and Medicine, 2025.</p>
+                </li>
+                <li class="border-l-2 border-slate-700 hover:border-cyan-400 pl-4 transition">
+                    <h4 class="text-slate-200 font-bold">digitalMALDI: A Single-Particle-Based Mass Spectrometric Detection System</h4>
+                    <p class="text-slate-400 text-sm italic">Chen, D... Regan, K.M. | Journal of Mass Spectrometry, 2025.</p>
+                </li>
+                <li class="border-l-2 border-slate-700 hover:border-cyan-400 pl-4 transition">
+                    <h4 class="text-slate-200 font-bold">Methods and Systems for Detecting Aerosol Particles (Patent)</h4>
+                    <p class="text-slate-400 text-sm italic">U.S. Patent Application No. US 2024/0282568 A1 | Published Aug 2024.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-cyan-400 font-mono text-lg mb-4">04. What's Next?</h2>
+            <h3 class="text-4xl font-bold text-slate-100 mb-6">Get In Touch</h3>
+            <p class="text-slate-400 mb-10">
+                I am actively looking for research-oriented roles in industry upon graduation. 
+                Whether you have a question about my research on generative AI for health or just want to say hi, my inbox is open!
+            </p>
+            <a href="mailto:regank@udel.edu" class="inline-block border border-cyan-400 text-cyan-400 px-8 py-4 rounded font-mono hover:bg-cyan-400/10 transition">
+                Say Hello
+            </a>
+            
+            <div class="flex justify-center space-x-8 mt-12 text-slate-400">
+                <a href="https://linkedin.com/in/kylemregan" target="_blank" class="hover:text-cyan-400 transition"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:kylereganm@gmail.com" class="hover:text-cyan-400 transition"><i data-lucide="mail"></i></a>
+            </div>
+
+            <p class="font-mono text-xs text-slate-600 mt-20">
+                Designed & Built by Kyle Regan
+            </p>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
